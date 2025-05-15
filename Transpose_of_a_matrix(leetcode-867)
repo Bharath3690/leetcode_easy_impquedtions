@@ -1,0 +1,28 @@
+class Solution {
+    public int[][] transpose(int[][] matrix) {
+        // This solution is for non square matrix
+        int row = matrix.length;
+        int col = matrix[0].length;
+        int[][] ans = new int[col][row];
+        for(int i=0;i<row;i++){
+            for(int j=0;j<col;j++){
+                ans[j][i] = matrix[i][j];
+            }
+        }
+        return ans;
+       
+    }
+}
+//for square matrix means same number of rows and cols we have to do
+// class Solution {
+//     public int[][] transpose(int[][] matrix) {
+//         for (int i = 0; i < matrix.length; i++) {
+//             for (int j = i; j < matrix[i].length; j++) { // **Important Fix Here**
+//                 int temp = matrix[i][j];
+//                 matrix[i][j] = matrix[j][i];
+//                 matrix[j][i] = temp;
+//             }
+//         }
+//         return matrix;
+//     }
+// }
