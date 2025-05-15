@@ -1,0 +1,24 @@
+class Solution {
+    public int numberOfMatches(int n) {
+        // int teams = n;
+        // int matches = 0;
+        // while(teams>1){
+        // if(teams%2==0){
+        //     matches+=teams/2;
+        //     teams = teams/2;
+        // }else{
+        //     matches+=(teams-1)/2;
+        //     teams = (teams-1)/2+1;
+        // }
+        // }
+        // return matches;
+        return n-1;//single line answer 
+        //Instead of simulating the entire tournament, here we will directly consider the beginning and end of the tournament.
+In this tournament, when a team loses, they are eliminated and will no longer play any matches.
+There are n teams, and 1 winner. Thus, n - 1 teams will be eliminated.
+Each match is played between two teams. One team wins, one team loses. Thus, each match eliminates exactly one team.
+As n - 1 teams will be eliminated, there will be n - 1 matches played, with each match eliminating a team.
+Algorithm
+Return n - 1.
+    }
+}
